@@ -6,8 +6,7 @@ import java.awt.Toolkit;
 import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // variables
         Scanner sc = new Scanner(System.in);
         String str; // string to be randomized
@@ -33,7 +32,7 @@ public class Main {
         keepInitial = choice.equals("y"); // y = true, n = false
 
         // randomize the string
-        for(int j = 0; j < run; j++) {
+        for (int j = 0; j < run; j++) {
             chosen.clear();
             out = new StringBuilder(str.length());
             if (keepInitial) {
