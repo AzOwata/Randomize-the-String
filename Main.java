@@ -32,21 +32,21 @@ public class Main {
         keepInitial = choice.equals("y"); // y = true, n = false
 
         // randomize the string
-        for (int j = 0; j < run; j++) {
+        for (int j = 0; j < run; j++) { // j = number of times the string will be randomized
             chosen.clear();
             out = new StringBuilder(str.length());
             if (keepInitial) {
-                chosen.add(0);
-                out.append(str.charAt(0));
+                chosen.add(0); // add the first character to the list
+                out.append(str.charAt(0)); // append the first character in the string to the output
             }
 
             for (int i = 0; i < str.length() - 1; i++) {
                 random = rnd.nextInt(str.length());
-                if (!chosen.contains(random)) {
-                    chosen.add(random);
-                    out.append(str.charAt(random));
+                if (!chosen.contains(random)) { // check if the random number has already been chosen
+                    chosen.add(random); // add the chosen number to the list
+                    out.append(str.charAt(random)); // append the chosen character in the string to the output
                 } else {
-                    i--;
+                    i--; // if the random number has already been chosen, try again
                 }
             }
             clipping.append(out).append("\n");
