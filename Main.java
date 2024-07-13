@@ -40,7 +40,7 @@ public class Main {
                 out.append(str.charAt(0)); // append the first character in the string to the output
             }
 
-            for (int i = 0; i < str.length() - 1; i++) {
+            for (int i = 0; i < str.length() - (keepInitial ? 1 : 0); i++) {
                 random = rnd.nextInt(str.length());
                 if (!chosen.contains(random)) { // check if the random number has already been chosen
                     chosen.add(random); // add the chosen number to the list
