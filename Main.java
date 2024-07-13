@@ -24,7 +24,7 @@ public class Main {
 
         // inputs
         System.out.println("Enter the string of which you want to randomize: ");
-        str = sc.next();
+        str = sc.nextLine();
         System.out.println("Enter the number of times you want to randomize the string: ");
         run = sc.nextInt();
         System.out.println("Do you want to keep the first character of the string? (y/n)");
